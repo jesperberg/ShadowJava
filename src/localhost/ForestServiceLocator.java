@@ -7,17 +7,17 @@
 
 package localhost;
 
-public class ShadowServiceLocator extends org.apache.axis.client.Service implements localhost.ShadowService {
+public class ForestServiceLocator extends org.apache.axis.client.Service implements localhost.ForestService {
 
-    public ShadowServiceLocator() {
+    public ForestServiceLocator() {
     }
 
 
-    public ShadowServiceLocator(org.apache.axis.EngineConfiguration config) {
+    public ForestServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
 
-    public ShadowServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+    public ForestServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
@@ -39,7 +39,7 @@ public class ShadowServiceLocator extends org.apache.axis.client.Service impleme
         ForestServiceSoapWSDDServiceName = name;
     }
 
-    public localhost.ShadowServiceSoap getForestServiceSoap() throws javax.xml.rpc.ServiceException {
+    public localhost.ForestServiceSoap getForestServiceSoap() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(ForestServiceSoap_address);
@@ -50,9 +50,9 @@ public class ShadowServiceLocator extends org.apache.axis.client.Service impleme
         return getForestServiceSoap(endpoint);
     }
 
-    public localhost.ShadowServiceSoap getForestServiceSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public localhost.ForestServiceSoap getForestServiceSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            localhost.ShadowServiceSoapStub _stub = new localhost.ShadowServiceSoapStub(portAddress, this);
+            localhost.ForestServiceSoapStub _stub = new localhost.ForestServiceSoapStub(portAddress, this);
             _stub.setPortName(getForestServiceSoapWSDDServiceName());
             return _stub;
         }
@@ -72,8 +72,8 @@ public class ShadowServiceLocator extends org.apache.axis.client.Service impleme
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (localhost.ShadowServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
-                localhost.ShadowServiceSoapStub _stub = new localhost.ShadowServiceSoapStub(new java.net.URL(ForestServiceSoap_address), this);
+            if (localhost.ForestServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
+                localhost.ForestServiceSoapStub _stub = new localhost.ForestServiceSoapStub(new java.net.URL(ForestServiceSoap_address), this);
                 _stub.setPortName(getForestServiceSoapWSDDServiceName());
                 return _stub;
             }

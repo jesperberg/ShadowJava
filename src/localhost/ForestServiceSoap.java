@@ -7,7 +7,7 @@
 
 package localhost;
 
-public interface ShadowServiceSoap extends java.rmi.Remote {
+public interface ForestServiceSoap extends java.rmi.Remote {
     public java.lang.String readFile(java.lang.String fileName) throws java.rmi.RemoteException;
     public java.lang.String allFileNames() throws java.rmi.RemoteException;
 }

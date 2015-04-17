@@ -7,7 +7,7 @@
 
 package localhost;
 
-public class ShadowServiceSoapStub extends org.apache.axis.client.Stub implements localhost.ShadowServiceSoap {
+public class ForestServiceSoapStub extends org.apache.axis.client.Stub implements localhost.ForestServiceSoap {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -46,16 +46,16 @@ public class ShadowServiceSoapStub extends org.apache.axis.client.Stub implement
 
     }
 
-    public ShadowServiceSoapStub() throws org.apache.axis.AxisFault {
+    public ForestServiceSoapStub() throws org.apache.axis.AxisFault {
          this(null);
     }
 
-    public ShadowServiceSoapStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
+    public ForestServiceSoapStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
          this(service);
          super.cachedEndpoint = endpointURL;
     }
 
-    public ShadowServiceSoapStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
+    public ForestServiceSoapStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
         if (service == null) {
             super.service = new org.apache.axis.client.Service();
         } else {
