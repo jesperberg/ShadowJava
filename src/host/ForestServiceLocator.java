@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package localhost;
+package host;
 
-public class ForestServiceLocator extends org.apache.axis.client.Service implements localhost.ForestService {
+public class ForestServiceLocator extends org.apache.axis.client.Service implements host.ForestService {
 
     public ForestServiceLocator() {
     }
@@ -39,7 +39,7 @@ public class ForestServiceLocator extends org.apache.axis.client.Service impleme
         ForestServiceSoapWSDDServiceName = name;
     }
 
-    public localhost.ForestServiceSoap getForestServiceSoap() throws javax.xml.rpc.ServiceException {
+    public host.ForestServiceSoap getForestServiceSoap() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(ForestServiceSoap_address);
@@ -50,9 +50,9 @@ public class ForestServiceLocator extends org.apache.axis.client.Service impleme
         return getForestServiceSoap(endpoint);
     }
 
-    public localhost.ForestServiceSoap getForestServiceSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public host.ForestServiceSoap getForestServiceSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            localhost.ForestServiceSoapStub _stub = new localhost.ForestServiceSoapStub(portAddress, this);
+            host.ForestServiceSoapStub _stub = new host.ForestServiceSoapStub(portAddress, this);
             _stub.setPortName(getForestServiceSoapWSDDServiceName());
             return _stub;
         }
@@ -72,8 +72,8 @@ public class ForestServiceLocator extends org.apache.axis.client.Service impleme
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (localhost.ForestServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
-                localhost.ForestServiceSoapStub _stub = new localhost.ForestServiceSoapStub(new java.net.URL(ForestServiceSoap_address), this);
+            if (host.ForestServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
+                host.ForestServiceSoapStub _stub = new host.ForestServiceSoapStub(new java.net.URL(ForestServiceSoap_address), this);
                 _stub.setPortName(getForestServiceSoapWSDDServiceName());
                 return _stub;
             }
