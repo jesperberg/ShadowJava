@@ -7,8 +7,6 @@
 
 package host;
 
-import com.sun.javafx.binding.SelectBinding.AsString;
-
 public interface ForestServiceSoap extends java.rmi.Remote {
     public java.lang.String readFile(java.lang.String fileName) throws java.rmi.RemoteException;
     public host.Account[] readAccounts() throws java.rmi.RemoteException;
@@ -19,7 +17,7 @@ public interface ForestServiceSoap extends java.rmi.Remote {
     public java.lang.String[][] allConstraints() throws java.rmi.RemoteException;
     public java.lang.String[][] allIndexs() throws java.rmi.RemoteException;
     public java.lang.String[][] allKeys() throws java.rmi.RemoteException;
-    public java.lang.String[][] allTablesTwo() throws java.rmi.RemoteException;
+    public java.lang.String[][] allTabelTwo() throws java.rmi.RemoteException;
     public java.lang.String[][] allTablesOne() throws java.rmi.RemoteException;
     public java.lang.String[][] firstNameOfSickPeople() throws java.rmi.RemoteException;
     public java.lang.String[][] personalAndRelatives() throws java.rmi.RemoteException;
@@ -27,7 +25,7 @@ public interface ForestServiceSoap extends java.rmi.Remote {
     public void addEmployee(java.lang.String no_, java.lang.String firstName) throws java.rmi.RemoteException;
     public void updateEmployee(java.lang.String no_, java.lang.String firstName) throws java.rmi.RemoteException;
     public void deleteEmployee(java.lang.String no_) throws java.rmi.RemoteException;
-    public String[][] allEmployees() throws java.rmi.RemoteException;
+    public java.lang.String[][] allEmployees() throws java.rmi.RemoteException;
     public java.lang.String[][] metaAllEmployees() throws java.rmi.RemoteException;
     public java.lang.String[][] metaReadAllAbsences() throws java.rmi.RemoteException;
     public java.lang.String[][] metaReadAllPortals() throws java.rmi.RemoteException;

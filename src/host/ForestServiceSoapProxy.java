@@ -1,7 +1,5 @@
 package host;
 
-import com.sun.javafx.binding.SelectBinding.AsString;
-
 public class ForestServiceSoapProxy implements host.ForestServiceSoap {
   private String _endpoint = null;
   private host.ForestServiceSoap forestServiceSoap = null;
@@ -100,10 +98,10 @@ public class ForestServiceSoapProxy implements host.ForestServiceSoap {
     return forestServiceSoap.allKeys();
   }
   
-  public java.lang.String[][] allTablesTwo() throws java.rmi.RemoteException{
+  public java.lang.String[][] allTabelTwo() throws java.rmi.RemoteException{
     if (forestServiceSoap == null)
       _initForestServiceSoapProxy();
-    return forestServiceSoap.allTablesTwo();
+    return forestServiceSoap.allTabelTwo();
   }
   
   public java.lang.String[][] allTablesOne() throws java.rmi.RemoteException{
@@ -148,7 +146,7 @@ public class ForestServiceSoapProxy implements host.ForestServiceSoap {
     forestServiceSoap.deleteEmployee(no_);
   }
   
-  public String[][] allEmployees() throws java.rmi.RemoteException{
+  public java.lang.String[][] allEmployees() throws java.rmi.RemoteException{
     if (forestServiceSoap == null)
       _initForestServiceSoapProxy();
     return forestServiceSoap.allEmployees();

@@ -7,8 +7,6 @@
 
 package host;
 
-import java.rmi.RemoteException;
-
 public class ForestServiceSoapStub extends org.apache.axis.client.Stub implements host.ForestServiceSoap {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
@@ -1559,11 +1557,5 @@ public class ForestServiceSoapStub extends org.apache.axis.client.Stub implement
   throw axisFaultException;
 }
     }
-
-	@Override
-	public String[][] allTablesTwo() throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }
